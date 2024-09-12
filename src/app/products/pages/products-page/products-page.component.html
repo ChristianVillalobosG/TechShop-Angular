@@ -1,0 +1,22 @@
+
+ <app-header></app-header>
+
+<div style="margin-bottom: 200px;"  class="container-fluid ms-md-0 ps-md-0 ms-lg-5 ps-lg-5 d-lg-flex gap-5">
+
+    <nav id="navbar-example3" class="pe-md-0 pe-lg-5 border-md-none border-end">
+      <nav  class="nav d-md-flex flex-lg-column  justify-content-center w-md-100 w-lg-25 py-5 my-5">
+        <form  class="d-flex py-4 d-none d-lg-block" role="search">
+          <input style="background-color: rgb(240, 240, 240);" class="form-control ps-4 me-3 py-3" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <a class="nav-link py-4 pe-md-3 styles_a" routerLink="electronics" routerLinkActive="text-primary">Electronics</a>
+        <a class="nav-link py-4 pe-md-3 styles_a" routerLink="mens-clothing" routerLinkActive="text-primary">Men's clothing</a>
+        <a class="nav-link py-4 pe-md-3 styles_a" routerLink="jewelery" routerLinkActive="text-primary">Jewelery</a>
+        <a class="nav-link py-4 pe-md-3 styles_a" routerLink="womens-clothing" routerLinkActive="text-primary">Women's clothing</a>
+      </nav>
+
+    </nav>
+
+    <router-outlet></router-outlet>
+
+</div>
+

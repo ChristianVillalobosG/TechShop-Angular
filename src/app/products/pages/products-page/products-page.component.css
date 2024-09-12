@@ -1,0 +1,22 @@
+.styles_a {
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}

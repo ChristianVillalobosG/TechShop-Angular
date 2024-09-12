@@ -1,0 +1,21 @@
+a {
+  text-decoration-line: none;
+  color: currentColor;
+}
+
+li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.1);
+}

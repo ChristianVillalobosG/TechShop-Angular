@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("bootstrap/dist/css/bootstrap.min.css");
+@import url("bootstrap-icons/font/bootstrap-icons.min.css");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}

@@ -1,0 +1,73 @@
+<header id="navbar" class=" w-100">
+  <nav class="navbar">
+    <div class="container-fluid justify-content-center">
+      <div class="row">
+        <div class="col">
+          <a class="navbar-brand techshop" routerLink="/">TechShop</a>
+        </div>
+        <div class="col nav-content d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block">
+          <ul class="navbar-nav list-group-horizontal links-content">
+            <li class="nav-item">
+              <a class="nav-link links text-primary" aria-current="page" routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link links" routerLink="about" routerLinkActive="text-primary">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link links" routerLink="products" routerLinkActive="text-primary" tabindex="-1" aria-disabled="true">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link links" routerLink="contact" routerLinkActive="text-primary" tabindex="-1" aria-disabled="true">Contact</a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-auto d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block">
+          <div class="input-group">
+            <span style="background: #D9D9D9;  border-radius: 54px 0px 0px 54px;" class="input-group-text ms-5" id="basic-addon1"><img src="search.svg" alt=""></span>
+            <input style="background: #D9D9D9; border-radius: 0px 54px 54px 0px; width: 150px;" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <ul class="navbar-nav list-group-horizontal">
+              <li class="nav-item px-4">
+                <a class="nav-link" aria-current="page" href=""><img src="heart.svg" alt=""></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""><img src="shopping-bag.svg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+
+      <div class="d-flex col-auto  icon-display-menu d-xxl-none" role="button"
+        data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="offcanvasRight">
+        <img src="icon_menu.svg" alt="icon_menu" width="30px">
+      </div>
+    </div>
+  </div>
+  </nav>
+</header>
+
+<div style="background-color: black;" class="offcanvas offcanvas-end" tabindex="-1" id="menu"
+aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas-header d-flex justify-content-between" id="OffCanvasHeader">
+  <h5 style="font-size: 20px; padding-left: 130px;" class="offcanvas-title font-bold text-white"
+    id="offcanvasRightLabel">TechShop</h5>
+  <div class="offcanvas-header" id="OffCanvasHeader">
+    <button style="background-color: white;" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+</div>
+<div  class=" offcanvas-body p-0 pt-3">
+  <div class="list-group list-group-flush w-100">
+    <a routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}" class="list-group-item list-canvas py-3">Home</a>
+    <a routerLink="/about" routerLinkActive="text-primary" class="list-group-item list-canvas py-3">About</a>
+    <a routerLink="/products" routerLinkActive="text-primary" class="list-group-item list-canvas py-3">Products</a>
+    <a routerLink="/contact" routerLinkActive="text-primary" class="list-group-item list-canvas py-3">Contact</a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+

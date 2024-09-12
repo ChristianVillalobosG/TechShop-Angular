@@ -1,0 +1,49 @@
+
+
+<app-spinner  *ngIf="showSpinner"></app-spinner>
+
+    <div *ngIf="!showSpinner" class="container mt-5 pt-5"  data-bs-target="#navbar-example3" data-aos="fade-up" data-aos-duration="1500">
+      <div class="row gap-5 justify-content-center justify-content-lg-start">
+
+        <div  class="col-12 col-md-5 py-4 image-container position-relative" *ngFor="let product of products">
+
+          <img style="object-fit: contain" [src]="product.image" class="card-img" width="400" height="300" alt="{{ product.title }}">
+          <button class="btn hover-button" (click)="openModal(product)"  data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Ver más</button>
+         </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1" >
+      <div  class="modal-dialog modal-xl container">
+        <div class="modal-content ">
+          <div class="modal-body d-lg-flex d-xl-flex d-xxl-flex">
+            <div class="col d-flex justify-content-center align-items-center pb-5 pb-lg-0">
+              <img style="object-fit: fill" [src]="selectedProduct?.image" class="img-fluid" width="400" height="300" alt="{{ selectedProduct?.title }}">
+            </div>
+            <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+              <h5 style="font-size: 36px; font-weight: 400;" class="modal-title" id="exampleModalToggleLabel">{{ selectedProduct?.title }}</h5>
+              <div class="rating">
+                <span class="star" *ngFor="let i of [].constructor(5); let index = index">
+                  <i class="fas fa-star" [class.active]="selectedRating && index < selectedRating.rate"></i>
+                </span>
+                <span class="rating-text">({{ selectedRating.rate || 0 }})</span>
+              </div>
+              <p style="font-size: 28px; font-weight: 700;">{{ selectedProduct?.price | currency }}</p>
+              <div class="pb-3">
+              <button class="btn buy-btn px-4 py-2">Buy</button>
+              </div>
+                 <p style="font-size: 20px; font-weight: 900;">Category</p>
+              <p style="font-size: 24px; font-weight: 400">{{ selectedProduct?.category }}</p>
+              <p style="font-size: 20px; font-weight: 900;">Description</p>
+              <p>{{ selectedProduct?.description }}</p>
+
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
