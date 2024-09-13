@@ -50,3 +50,7 @@ a {
 a:hover {
   transform: scale(1.1);
 }
+
+.icon-black {
+  filter: brightness(0) invert(0);
+}
