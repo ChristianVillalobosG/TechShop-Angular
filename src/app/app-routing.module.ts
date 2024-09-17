@@ -16,7 +16,8 @@ const routes: Routes = [
 
 {
     path: '',
-    component: HomePageComponent
+    component: HomePageComponent,
+
 },
 
 {
